@@ -1,0 +1,11 @@
+<div class="row">
+  <h2>Listas Públicas</h2>
+</div>
+<div class="row">
+  <%= render 'lists' %>
+</div>
+<div class="row">
+  <%= will_paginate @public_lists %>
+
+  <%= link_to 'Voltar', root_path, :class => 'btn' %>
+</div>

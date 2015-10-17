@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Todolist</title>
+  <link href='http://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body class="container">
+
+  <div class="row">
+    <% if user_signed_in? %>
+      <span>
+        <%= link_to "Minhas listas", root_path %>
+      </span>
+      <span>
+        <%= link_to "Públicas", public_lists_path %>
+      </span>
+      <span>
+        <%= link_to 'Favoritas', user_favorite_lists_path(current_user), :id => 'user_favorites' %>
+      </span>
+      <span>
+        Olá, <%= current_user.email %> |
+          <%= link_to "Sair", destroy_user_session_path, :method => :delete %>
+      </span>
+    <% end %>
+  </div>
+
+  <div class="row">
+    <p id="notice"><%= notice %></p>
+  </div>
+
+  <%= yield %>
+
+</body>
+</html>

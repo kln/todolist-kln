@@ -1,0 +1,15 @@
+<div class="row task-item">
+	<% if task.completed? %>
+		<strike><%= task.description %></strike>
+	<% else %>
+		<%= task.description %>
+	<% end %>
+
+	<% if task.completed? %>
+		<%= link_to "Desfazer", incomplete_list_task_path(@list, task.id), :id => 'todo-task', method: :patch %>
+	<% else %>
+		<%= link_to "Concluído", completed_list_task_path(@list, task.id), :id => 'todo-task', method: :patch %>
+	<% end %>
+
+  <%= link_to image_tag('list/delete.png', title: "Excluir"), list_task_path(@list, task.id), method: :delete, data: { confirm: "Você tem certeza?"} %>
+</div>

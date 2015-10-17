@@ -1,0 +1,14 @@
+<%= simple_form_for @list do |f| %>
+  <div class="row">
+    <%= f.hint "Título" %>
+    <%= f.input :title, label: false %>
+  </div>
+  <div class="row">
+    <%= f.hint "Pública?" %>
+    <%= f.input :opened, label: false, as: :boolean %>
+  </div>
+  <div class="row">
+    <%= f.button :submit, "Salvar", :class => 'btn new-list', :id => "save-list" %>
+    <%= link_to 'Voltar', root_path, :class => 'btn btn-back' %>
+  </div>
+<% end %>

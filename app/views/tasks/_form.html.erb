@@ -1,0 +1,10 @@
+<%= simple_form_for([@list, Task.new], remote: true) do |f| %>
+  <div class="row">
+    <%= f.input :description, label: false, placeholder: "nova tarefa...", :class => 'input-new-task', :id => "task_description" %>
+  </div>
+  <div class="row">
+  	<%= f.submit  "Adicionar Tarefa", :class => 'btn new-task', :data => "create-task", :id => "save-task" %>
+    <%= link_to 'Voltar', :back, :class => 'btn btn-back' %>
+  </div>
+
+<% end %>

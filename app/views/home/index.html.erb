@@ -1,0 +1,24 @@
+<% if user_signed_in? %>
+  <div class="row"><%= render "users/lists" %></div>
+
+<% else %>
+  <div>
+    <div class="row">
+      <%= simple_form_for(:user, url: session_path(:user)) do |f| %>
+          <%= f.hint "Acesse sua conta" %>
+          <%= f.input :email, inline_label: true, label: false, placeholder: "Seu email", required: false, autofocus: true %>
+          <%= f.input :password, label: false, placeholder: "Sua senha", required: false %>
+          <%= f.button :submit, "Acessar", :class => 'btn sign_in', :id => 'user_login' %>
+      <% end %>
+    </div>
+
+     <div  class="row">
+      <h3>Organize e compartilhe suas listas de tarefas.</h3>
+      <%= render 'lists' %>
+     </div>
+
+    <div class="center-content">
+      <%= link_to "Cadastre-se", new_user_registration_path, :class => 'btn sign_up' %>
+    </div>
+  </div>
+<% end %>

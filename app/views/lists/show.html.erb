@@ -1,0 +1,11 @@
+<div class="row">
+  <h3><%= @list.title %> - <%= list_privacy_image %></h3>
+</div>
+
+<div id="new-task-item">
+  <%= render @list.tasks %>
+</div>
+
+<div class="row">
+  <%= render "tasks/form" %>
+</div>

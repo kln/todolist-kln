@@ -1,0 +1,21 @@
+.sign-up .simple_form input[type="password"] {
+  width: 300px;
+}
+
+.sign-up .simple_form input[type="email"] {
+  width: 300px;
+}
+
+.sign-up .btn-back {
+  position: relative;
+  padding: 8px;
+  margin: 0 auto;
+  width: 145px;
+}
+
+.sign-up input[type="submit"] {
+  padding: 8px;
+  margin: 0 10px 0 0;
+  height: 35px;
+  width: 145px;
+}

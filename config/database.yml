@@ -1,0 +1,15 @@
+default: &default
+  adapter: postgresql
+  pool: 5
+  username: postgres
+  password: postgres
+  port: 5432
+  timeout: 5000
+
+development:
+  <<: *default
+  database: todo_development
+
+test:
+  <<: *default
+  database: todo_test

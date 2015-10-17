@@ -1,0 +1,12 @@
+<% @public_lists.each do |list| %>
+  <div class="row list-item">
+      <%= link_to list.title, list %> <span>|</span> <%= time_ago_in_words(list.created_at) %>
+      <% if current_user %>
+        <% if is_a_favorite_list?(list.id, current_user.id) %>
+          <%= link_to image_tag('list/favorite.png', title: "Remover das favoritas"), remove_from_favorites_path(list.user_id, list.id), method: :delete, :id => "unfav-list" %>
+        <% else %>
+          <%= link_to image_tag('list/nofavorite.png', title: "Marcar como favorita"), favorite_list_path(list), method: :post, :id => "fav-list" %>
+        <% end %>
+      <% end %>
+  </div>
+<% end %>

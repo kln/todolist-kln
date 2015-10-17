@@ -1,0 +1,15 @@
+<div class="row">
+  <h2>Minhas Listas Favoritas</h2>
+
+  <% @favorites.each do |fav| %>
+    <div class="row list-item">
+      <%= link_to fav.list.title, fav.list %>
+      <%= link_to image_tag('list/favorite.png', title: "Remover dos favoritos"), remove_from_favorites_path(fav.list.user_id, fav.list.id), method: :delete %>
+    </div>
+  <% end %>
+  <br/>
+  <br/>
+  <div class="row">
+    <%= link_to 'Voltar', root_path, :class => 'btn' %>
+  </div>
+</div>

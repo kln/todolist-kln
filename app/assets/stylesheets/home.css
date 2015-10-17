@@ -1,0 +1,97 @@
+* {
+  margin: 5px auto;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 600px;
+  background: #ECECEC;
+  font-family: 'Raleway', sans-serif;
+}
+
+.row {
+  display: inline-block;
+  width: 100%;
+}
+
+.row span a {
+  text-decoration: none;
+}
+
+.row span a:hover {
+  text-decoration: underline;
+}
+
+.btn {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0px;
+  width: 120px;
+  background: #F89406;
+  padding: 10px;
+  border: 0;
+  text-decoration: none;
+  font-size: 80%;
+  font-weight: bold;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #FFF;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.btn.sign_in {
+  height: 30px;
+}
+
+.btn.sign_up {
+  text-align: center;
+  margin-top: 40px;
+  width: 200px;
+}
+
+.center-content {
+  display: -webkit-flex;
+  display:         flex;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+}
+
+span {
+  padding: 0 25px 0 0;
+}
+
+input[type="submit"] {
+  padding: 0px;
+}
+
+.simple_form input, p {
+  float: left;
+  margin: 4px 4px 4px 2px;
+}
+
+.simple_form p {
+  padding: 8px 2px 0 0;
+  text-transform: uppercase;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+
+}
+
+.simple_form input[type="email"], input[type="password"] {
+  text-align: left;
+  width: 120px;
+  padding: 5px;
+  font-size: 70%;
+  height: 30px;
+}
+
+.simple_form input[type="submit"] {
+  text-align: center;
+  padding-left: 2px;
+  margin-left: 2px;
+}
