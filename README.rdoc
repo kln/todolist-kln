@@ -1,3 +1,6 @@
+[ ![Codeship Status for kln/todolist-kln](https://codeship.com/projects/bda77310-5729-0133-ec4f-5ebc52a48109/status?branch=master)](https://codeship.com/projects/109480)
+
+
 Um simples todolist com listas públicas e privadas.
 
 Disponível em: http://todolist-kln.herokuapp.com
